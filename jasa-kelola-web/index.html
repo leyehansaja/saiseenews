@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saiseenews.com - Jasa kelola website profesional untuk produk dan jasa.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Saiseenews.com - Jasa Kelola Website Profesional</title>
+  <style>
+   :root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --white: #ffffff;
+    --whatsapp: #e5ddd5;
+    --chatheader: #075e54;
+    --green: #e6ffda;
+    --text-blur: #a7a1a1;
+   }
+
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+   }
+
+   .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+   }
+
+   header,
+   .hero,
+   .features,
+   .packages,
+   .comparison,
+   .target,
+   .testimonial {
+    padding: 2rem 0;
+   }
+
+   header {
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+   }
+
+   header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+   }
+
+   h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 15px;
+   }
+
+   h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+   }
+
+   h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+   }
+
+   h3 {
+    display: block;
+    font-size: 1.80em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center;
+   }
+
+   h4 {
+    display: block;
+    font-size: 1.20em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center;
+   }
+
+   .tab-menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+   }
+
+   .logo {
+    margin-right: 1rem;
+   }
+
+   .tab-menu {
+    display: flex;
+    justify-content: center;
+    background: var(--primary-color);
+    padding: 0.5rem;
+   }
+
+   .tab-menu a {
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+   }
+
+   .tab-menu a:hover {
+    background: var(--accent-color);
+   }
+
+   .mobile-menu {
+    display: none;
+    background: var(--primary-color);
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+   }
+
+   .mobile-menu i {
+    font-size: 1.5rem;
+    color: var(--white);
+   }
+
+   #menuToggle {
+    display: none;
+   }
+
+   #menuToggle:checked+.tab-menu-container .tab-menu {
+    display: flex;
+    flex-direction: column;
+   }
+
+   #menuToggle:checked+.tab-menu-container .mobile-menu .fa-bars {
+    display: none;
+   }
+
+   #menuToggle:checked+.tab-menu-container .mobile-menu .fa-xmark {
+    display: inline-block;
+   }
+
+   .fa-xmark {
+    display: none;
+   }
+
+   @media (max-width: 768px) {
+    .tab-menu {
+     display: none;
+    }
+
+    .mobile-menu {
+     display: block;
+    }
+
+    .tab-menu a {
+     padding: 1rem;
+     width: 100%;
+     text-align: center;
+    }
+
+    .tab-menu-container {
+     justify-content: space-between;
+     padding-left: 1rem;
+     padding-right: 1rem;
+     padding-top: 1rem;
+     padding-bottom: 0.5rem;
+    }
+
+    .logo {
+     flex-grow: 1;
+     display: flex;
+     align-items: center;
+    }
+
+    .logo img {
+     height: 40px;
+    }
+   }
+
+   .highlight {
+    color: var(--primary-color);
+   }
+
+   .hero {
+    background: url('/images/jasa-kelola-web-big.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    min-height: 300px;
+   }
+
+   .hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+   }
+
+   .hero-content h2 {
+    color: var(--primary-color);
+    }
+
+   .cta-button {
+    display: block;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+   }
+
+   .cta-button:hover {
+    background: #c0392b;
+   }
+
+   @media (max-width: 768px) {
+  .cta-button {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+    }
+
+    h3.cta-button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    }
+   }
+
+   .features {
+    background: linear-gradient(135deg, #f6f9fc 0%, var(--white) 100%);
+   }
+
+   .feature-grid,
+   .package-grid,
+   .comparison-list,
+   .target-list {
+    display: grid;
+    gap: 2rem;
+   }
+
+   .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   }
+
+   .feature {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+
+   .package-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+
+   .feature:hover,
+   .package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+   }
+
+   .feature-icon {
+    background: var(--primary-color);
+    color: var(--white);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+   }
+
+   .package-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   }
+
+   .package-price {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0.20rem 0;
+    font-weight: 600;
+    text-align: center;
+   }
+
+   .package-discount {
+    font-size: 2rem;
+    color: var(--text-blur);
+    font-weight: 100;
+    text-align: center;
+    text-decoration: line-through;
+   }
+
+   .comparison {
+    background: var(--primary-color);
+    color: var(--white);
+   }
+
+   .comparison-list {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    list-style-type: none;
+    padding: 0;
+   }
+
+   .comparison-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+   }
+
+   .comparison-item::before {
+    content: '✓';
+    margin-right: 10px;
+    color: #2ecc71;
+    font-weight: bold;
+   }
+
+   .savings {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+   }
+
+   .comparison-item {
+    margin-right: 20px;
+   }
+
+   .comparison-item strong {
+    display: block;
+    margin-right: 10px;
+    color: var(--text-color);
+    font-size: 1.17rem;
+   }
+
+   .comparison-item p {
+    margin-top: 10px;
+    font-size: 1.17rem;
+   }
+
+   .savings {
+    font-weight: bold;
+    margin-top: 20px;
+   }
+
+   .target {
+    background: var(--accent-color);
+    color: var(--white);
+   }
+
+   .target-list {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    list-style-type: none;
+    padding: 0;
+   }
+
+   .target-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+   }
+
+   .target-item::before {
+    content: '✓';
+    margin-right: 10px;
+    color: #2ecc71;
+    font-weight: bold;
+   }
+
+   .target-item {
+    margin-right: 20px;
+   }
+
+   .target-item strong {
+    display: block;
+    margin-right: 10px;
+    color: var(--text-color);
+    font-size: 1.17rem;
+   }
+
+   .target-item p {
+    margin-top: 10px;
+    font-size: 1.17rem;
+   }
+
+   @media (max-width: 768px) {
+    .target-list {
+     grid-template-columns: 1fr;
+    }
+
+    .target-item {
+     margin-right: 0;
+     padding: 1rem;
+     text-align: center;
+    }
+
+    .target-item strong {
+     font-size: 1.1rem;
+    }
+
+    .target-item p {
+     font-size: 1rem;
+    }
+   }
+
+   @media (max-width: 768px) {
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-card {
+     padding: 1rem;
+     margin: 1rem 0;
+     text-align: center;
+    }
+
+    .package-price,
+    .package-discount {
+     font-size: 1.2rem;
+    }
+
+    .package-discount {
+     text-decoration: line-through;
+    }
+
+    ul {
+     padding-left: 0;
+     list-style-type: none;
+    }
+
+    ul h4 {
+     font-size: 1.2rem;
+     margin-bottom: 0.5rem;
+    }
+
+    ul li {
+     font-size: 1rem;
+     margin-bottom: 0.5rem;
+    }
+
+    p {
+     font-size: 0.9rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+   }
+
+   @media (max-width: 768px) {
+    .comparison-list {
+     grid-template-columns: 1fr;
+    }
+
+    .comparison-item {
+     margin-right: 0;
+     padding: 1rem;
+     text-align: center;
+    }
+
+    .comparison-item strong {
+     font-size: 1.1rem;
+    }
+
+    .comparison-item p {
+     font-size: 1rem;
+    }
+   }
+
+   .testimonial-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+   }
+
+   .whatsapp-chat {
+    flex: 0 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
+    margin-right: 20px;
+    background-color: var(--whatsapp);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   }
+
+   .chat-header {
+    background-color: var(--chatheader);
+    color: var(--white);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+   }
+
+   .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+   }
+
+   .chat-info h3 {
+    margin: 0;
+    font-size: 16px;
+   }
+
+   .chat-info p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+   }
+
+   .chat-body {
+    padding: 20px;
+   }
+
+   .message {
+    background-color: var(--white);
+    border-radius: 7px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+   }
+
+   .message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    border: 5px solid transparent;
+    border-right-color: var(--white);
+    border-top-color: var(--white);
+   }
+
+   .message p {
+    margin: 0;
+    font-size: 14px;
+   }
+
+   .respond {
+    background-color: var(--green);
+    border-radius: 7px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    left: 30px;
+   }
+
+   .respond::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -7px;
+    border: 5px solid transparent;
+    border-left-color: var(--green);
+    border-top-color: var(--green);
+   }
+
+   .respond p {
+    margin: 0;
+    font-size: 14px;
+   }
+
+   @media (min-width: 768px) {
+    .whatsapp-chat {
+     width: calc(50% - 10px);
+    }
+   }
+
+   @media (min-width: 1024px) {
+    .whatsapp-chat {
+     width: calc(100% - 13.333px);
+    }
+   }
+
+   footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 2rem 0;
+   }
+
+   .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+   }
+
+   .footer-section {
+    flex: 1 1 200px;
+    margin: 1rem;
+   }
+
+   .footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+   }
+
+   .footer-section p,
+   .footer-section ul {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+   }
+
+   .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+   }
+
+   .footer-section ul li {
+    margin: 0.5rem 0;
+   }
+
+   .footer-section ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+   }
+
+   .footer-section ul li a:hover {
+    color: var(--primary-color);
+   }
+
+   .footer-section ul li i {
+    margin-right: 0.5rem;
+   }
+
+   .footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+   }
+
+   @media (max-width: 768px) {
+    .footer-content {
+     flex-direction: column;
+    }
+
+    .footer-section {
+     margin: 0.5rem 0;
+    }
+   }
+  </style>
+ </head>
+ <body>
+  <input type="checkbox" id="menuToggle">
+  <div class="tab-menu-container">
+   <div class="logo">
+    <img src="/images/logo/saiseenews-192x192.png" alt="Logo" height="40">
+   </div>
+   <div class="mobile-menu">
+    <label for="menuToggle">
+     <i class="fas fa-bars"></i>
+     <i class="fas fa-xmark"></i>
+    </label>
+   </div>
+   <div class="tab-menu">
+    <a href="/">Beranda</a>
+    <a href="/archive/">Layanan</a>
+    <a href="/portofolio/">Portofolio</a>
+    <a href="/profile/">Tentang Kami</a>
+    <a href="#">Blog</a>
+   </div>
+  </div>
+  <header>
+   <div class="container">
+    <h1>Jasa Kelola Website Bulanan <span class="highlight">| Saiseenews.com</span>
+    </h1>
+   </div>
+  </header>
+  <section class="hero">
+   <div class="hero-content">
+    <h2 class="section-title">Jadikan Website Bisnis Anda Sebagai Aset Digital <br> Yang Lebih Baik </h2>
+    <h4>Kami menyediakan layanan kelola website bulanan <br> dari mulai riset kompetitor, riset kata kunci dan update konten secara berkala. </h4>
+    <a href="#packages" class="cta-button">Lihat Paket Kami</a>
+   </div>
+  </section>
+  <section class="features">
+   <div class="container">
+    <h2 class="section-title">Mengapa Memilih Jasa Kelola Web Dari Kami?</h2>
+    <div class="feature-grid">
+     <div class="feature">
+      <div class="feature-icon">
+       <i class="fas fa-sync-alt" aria-hidden="true"></i>
+      </div>
+      <h3>Up to Date</h3>
+      <p>Website yang disukai search engine (seperti google) adalah web yang up to date dan terurus dengan baik. Dengan memakai jasa kami Anda tidak perlu repot memikirkan ide menulis artikel, cukup kami yang mengerjakan</p>
+     </div>
+     <div class="feature">
+      <div class="feature-icon">
+       <i class="fas fa-chart-line" aria-hidden="true"></i>
+      </div>
+      <h3>Riset Kompetitor</h3>
+      <p>Optimasi web tidak hanya membuat artikel secara rutin saja, akan tetapi meriset siapa level pesaing kita itu juga penting. Ini yang akan kami lakukan untuk website Anda</p>
+     </div>
+     <div class="feature">
+      <div class="feature-icon">
+       <i class="fas fa-search-dollar" aria-hidden="true"></i>
+      </div>
+      <h3>Optimasi SEO</h3>
+      <p>Struktur artikel yang disukai search engine adalah struktur yang memenuhi kaidah SEO. Kami akan mengoptimasi SEO secara maksimal pada setiap artikel web Anda</p>
+     </div>
+     <div class="feature">
+      <div class="feature-icon">
+       <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+      </div>
+      <h3>Biaya Terjangkau</h3>
+      <p>Kami sangat menghargai waktu dan juga harapan Anda pada aset digital website. Maka meskipun kami menawarkan fitur premium, biaya tetap lebih terjangkau</p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="target">
+   <div class="container">
+    <h2 class="section-title">Cocok Untuk Siapa Jasa Ini?</h2>
+    <ul class="target-list">
+     <li class="target-item">
+      <strong>Orang Sibuk</strong>
+      <p>Jasa kelola website kami cocok untuk Anda yang sibuk dan tidak punya waktu untuk mengelola web dengan baik dan benar.</p>
+     </li>
+     <li class="target-item">
+      <strong>Orang Gaptek</strong>
+      <p>Mengelola web bukan perkara yang mudah. Tapi dengan jasa kami Anda cukup duduk manis dan web teroptimasi secara otomatis.</p>
+     </li>
+     <li class="target-item">
+      <strong>Budget Minim</strong>
+      <p>Mengelola web juga butuh biaya yang tidak sedikit. Dengan jasa kami Anda tidak perlu karyawan, laptop dan internet.</p>
+     </li>
+     <li class="target-item">
+      <strong>Upgrade Aset</strong>
+      <p>Aset digital harus di rawat secara berkala agar bisa bersaing dengan kompetitor. Dengan jasa kami Anda tidak perlu repot melakukannya.</p>
+     </li>
+    </ul>
+   </div>
+  </section>
+  <section id="packages" class="packages">
+   <div class="container">
+    <h2 class="section-title">Paket Jasa Kelola Web Bulanan</h2>
+    <div class="package-grid">
+     <div class="package-card">
+      <h3 class="cta-button">Paket Perkenalan</h3>
+      <div class="package-price">Rp 450.000/bulan</div>
+      <div class="package-discount">Rp 650.000/bulan</div>
+      <ul>
+       <li>✅ Kelola 1 Web/Blog</li>
+       <li>✅ Riset 1 Keyword</li>
+       <li>✅ Artikel 1 Post per hari</li>
+       <li>✅ Optimasi Konten SEO</li>
+       <li>✅ Optimasi Index GSC (Google Search Console)</li>
+       <li>✅ Optimasi Page Speed</li>
+       <li>✅ Report Hasil Via Email</li>
+      </ul>
+     </div>
+     <div class="package-card">
+      <h3 class="cta-button">Paket Teman</h3>
+      <div class="package-price">Rp 650.000/bulan</div>
+      <div class="package-discount">Rp 850.000/bulan</div>
+      <ul>
+       <li>✅ Kelola 1 Web/Blog</li>
+       <li>✅ Riset Kompetitor 10 Besar</li>
+       <li>✅ Riset 2 Keyword</li>
+       <li>✅ Artikel 2 Post per hari</li>
+       <li>✅ Optimasi Konten SEO</li>
+       <li>✅ Optimasi Index GSC (Google Search Console)</li>
+       <li>✅ Optimasi Page Speed</li>
+       <li>✅ Report Mingguan Via Email</li>
+      </ul>
+     </div>
+     <div class="package-card">
+      <h3 class="cta-button">Paket Langganan</h3>
+      <div class="package-price">Rp 750.000/bulan</div>
+      <div class="package-discount">Rp 950.000/bulan</div>
+      <ul>
+       <li>✅ Kelola 1 Web/Blog</li>
+       <li>✅ Riset Kompetitor 10 Besar</li>
+       <li>✅ Riset 3 Keyword</li>
+       <li>✅ Artikel 3 Post per hari</li>
+       <li>✅ Optimasi Konten SEO</li>
+       <li>✅ Optimasi Index GSC (Google Search Console)</li>
+       <li>✅ Auto Share Medsos</li>
+       <li>✅ Optimasi Page Speed</li>
+       <li>✅ Report Mingguan Via Email</li>
+      </ul>
+     </div>
+     <div class="package-card">
+      <h3 class="cta-button">Paket Spesialist</h3>
+      <div class="package-price">Rp 850.000/bulan</div>
+      <div class="package-discount">Rp 1.050.000/bulan</div>
+      <ul>
+       <li>✅ Kelola 1 Web/Blog</li>
+       <li>✅ Riset Kompetitor 10 Besar</li>
+       <li>✅ Riset 3 Keyword</li>
+       <li>✅ Artikel 3 Post per hari</li>
+       <li>✅ Optimasi Konten SEO</li>
+       <li>✅ Optimasi Index GSC (Google Search Console) dan Bing</li>
+       <li>✅ Auto Share Medsos</li>
+       <li>✅ Optimasi Backlink</li>
+       <li>✅ Optimasi Page Speed</li>
+       <li>✅ Report Mingguan Via Email</li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="comparison">
+   <div class="container">
+    <h2 class="section-title">Perbandingan Biaya dan Waktu</h2>
+    <ul class="comparison-list">
+     <li class="comparison-item">
+      <strong>Tidak Perlu Gaji Karyawan</strong>
+      <p>Hemat biaya pengeluaran bulanan tanpa perlu membayar gaji untuk karyawan tambahan.</p>
+     </li>
+     <li class="comparison-item">
+      <strong>Tidak Perlu Beli Paket Data Internet</strong>
+      <p>Tidak perlu mengeluarkan biaya tambahan untuk paket data internet yang digunakan karyawan.</p>
+     </li>
+     <li class="comparison-item">
+      <strong>Tidak Perlu Laptop/PC</strong>
+      <p>Hemat biaya untuk pembelian perangkat keras seperti laptop atau PC untuk karyawan baru.</p>
+     </li>
+     <li class="comparison-item">
+      <strong>Hemat Waktu</strong>
+      <p>Waktu yang seharusnya digunakan untuk mengelola tugas-tugas rutin dapat dialihkan ke hal yang lebih penting.</p>
+     </li>
+     <li class="comparison-item">
+      <strong>Biaya Lebih Rendah</strong>
+      <p>Pengeluaran secara keseluruhan akan lebih rendah dibandingkan dengan biaya yang dikeluarkan untuk mempekerjakan karyawan.</p>
+     </li>
+     <li class="comparison-item">
+      <strong>Website Anda Lebih Terurus</strong>
+      <p>Website Anda akan dikelola secara profesional, memastikan performa dan keamanannya selalu terjaga.</p>
+     </li>
+    </ul>
+    <p class="savings">Hemat Hingga 50%+ Dibanding Dikerjakan Sendiri/Gaji Karyawan.</p>
+   </div>
+  </section>
+  <section class="testimonial">
+   <div class="container">
+    <h2 class="section-title">Apa Kata Klien Kami</h2>
+    <div class="testimonial-slider">
+     <div class="whatsapp-chat">
+      <div class="chat-header">
+       <img src="https://fakedetail.com/assets/images/profile.jpg" alt="Sarah Avatar" class="avatar">
+       <div class="chat-info">
+        <h3>Siti</h3>
+        <p>Online</p>
+       </div>
+      </div>
+      <div class="chat-body">
+       <div class="message">
+        <p>Jasa Kelola Website dari Saiseenews.com sangat membantu! Update konten dan index secara rutin membuat website kami selalu fresh dan mudah dicari. 🌟</p>
+       </div>
+       <div class="respond">
+        <p>Kami senang mendengarnya. Terima kasih <svg viewBox="0 0 16 11" height="11" width="16" fill="#53bdeb" preserveAspectRatio="xMidYMid meet">
+          <path d="M11.0714 0.652832C10.991 0.585124 10.8894 0.55127 10.7667 0.55127C10.6186 0.55127 10.4916 0.610514 10.3858 0.729004L4.19688 8.36523L1.79112 6.09277C1.7488 6.04622 1.69802 6.01025 1.63877 5.98486C1.57953 5.95947 1.51817 5.94678 1.45469 5.94678C1.32351 5.94678 1.20925 5.99544 1.11192 6.09277L0.800883 6.40381C0.707784 6.49268 0.661235 6.60482 0.661235 6.74023C0.661235 6.87565 0.707784 6.98991 0.800883 7.08301L3.79698 10.0791C3.94509 10.2145 4.11224 10.2822 4.29844 10.2822C4.40424 10.2822 4.5058 10.259 4.60313 10.2124C4.70046 10.1659 4.78086 10.1003 4.84434 10.0156L11.4903 1.59863C11.5623 1.5013 11.5982 1.40186 11.5982 1.30029C11.5982 1.14372 11.5348 1.01888 11.4078 0.925781L11.0714 0.652832ZM8.6212 8.32715C8.43077 8.20866 8.2488 8.09017 8.0753 7.97168C7.99489 7.89128 7.8891 7.85107 7.75791 7.85107C7.6098 7.85107 7.4892 7.90397 7.3961 8.00977L7.10411 8.33984C7.01947 8.43717 6.97715 8.54508 6.97715 8.66357C6.97715 8.79476 7.0237 8.90902 7.1168 9.00635L8.1959 10.0791C8.33132 10.2145 8.49636 10.2822 8.69102 10.2822C8.79681 10.2822 8.89838 10.259 8.99571 10.2124C9.09304 10.1659 9.17556 10.1003 9.24327 10.0156L15.8639 1.62402C15.9358 1.53939 15.9718 1.43994 15.9718 1.32568C15.9718 1.1818 15.9125 1.05697 15.794 0.951172L15.4386 0.678223C15.3582 0.610514 15.2587 0.57666 15.1402 0.57666C14.9964 0.57666 14.8715 0.635905 14.7657 0.754395L8.6212 8.32715Z"></path>
+         </svg>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="whatsapp-chat">
+      <div class="chat-header">
+       <img src="https://fakedetail.com/assets/images/profile.jpg" alt="Alex Avatar" class="avatar">
+       <div class="chat-info">
+        <h3>Budi</h3>
+        <p>Online</p>
+       </div>
+      </div>
+      <div class="chat-body">
+       <div class="message">
+        <p>Dengan Jasa Kelola Website dari Jualan Pro, konten kami selalu up-to-date dan terindex dengan baik. Trafik naik pesat! 📈</p>
+       </div>
+       <div class="respond">
+        <p>Kami sangat senang mendengar berita ini. Terima kasih <svg viewBox="0 0 16 11" height="11" width="16" fill="#53bdeb" preserveAspectRatio="xMidYMid meet">
+          <path d="M11.0714 0.652832C10.991 0.585124 10.8894 0.55127 10.7667 0.55127C10.6186 0.55127 10.4916 0.610514 10.3858 0.729004L4.19688 8.36523L1.79112 6.09277C1.7488 6.04622 1.69802 6.01025 1.63877 5.98486C1.57953 5.95947 1.51817 5.94678 1.45469 5.94678C1.32351 5.94678 1.20925 5.99544 1.11192 6.09277L0.800883 6.40381C0.707784 6.49268 0.661235 6.60482 0.661235 6.74023C0.661235 6.87565 0.707784 6.98991 0.800883 7.08301L3.79698 10.0791C3.94509 10.2145 4.11224 10.2822 4.29844 10.2822C4.40424 10.2822 4.5058 10.259 4.60313 10.2124C4.70046 10.1659 4.78086 10.1003 4.84434 10.0156L11.4903 1.59863C11.5623 1.5013 11.5982 1.40186 11.5982 1.30029C11.5982 1.14372 11.5348 1.01888 11.4078 0.925781L11.0714 0.652832ZM8.6212 8.32715C8.43077 8.20866 8.2488 8.09017 8.0753 7.97168C7.99489 7.89128 7.8891 7.85107 7.75791 7.85107C7.6098 7.85107 7.4892 7.90397 7.3961 8.00977L7.10411 8.33984C7.01947 8.43717 6.97715 8.54508 6.97715 8.66357C6.97715 8.79476 7.0237 8.90902 7.1168 9.00635L8.1959 10.0791C8.33132 10.2145 8.49636 10.2822 8.69102 10.2822C8.79681 10.2822 8.89838 10.259 8.99571 10.2124C9.09304 10.1659 9.17556 10.1003 9.24327 10.0156L15.8639 1.62402C15.9358 1.53939 15.9718 1.43994 15.9718 1.32568C15.9718 1.1818 15.9125 1.05697 15.794 0.951172L15.4386 0.678223C15.3582 0.610514 15.2587 0.57666 15.1402 0.57666C14.9964 0.57666 14.8715 0.635905 14.7657 0.754395L8.6212 8.32715Z"></path>
+         </svg>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="whatsapp-chat">
+      <div class="chat-header">
+       <img src="https://fakedetail.com/assets/images/profile.jpg" alt="Emily Avatar" class="avatar">
+       <div class="chat-info">
+        <h3>Rizki</h3>
+        <p>Online</p>
+       </div>
+      </div>
+      <div class="chat-body">
+       <div class="message">
+        <p>Website kami selalu terupdate dengan konten terbaru berkat Saiseenews.com. Penjualan naik 45%! 💃</p>
+       </div>
+       <div class="respond">
+        <p>Ma sya Allah, berita yang menyenangkan! Terima kasih atas kepercayaannya kang <svg viewBox="0 0 16 11" height="11" width="16" fill="#53bdeb" preserveAspectRatio="xMidYMid meet">
+          <path d="M11.0714 0.652832C10.991 0.585124 10.8894 0.55127 10.7667 0.55127C10.6186 0.55127 10.4916 0.610514 10.3858 0.729004L4.19688 8.36523L1.79112 6.09277C1.7488 6.04622 1.69802 6.01025 1.63877 5.98486C1.57953 5.95947 1.51817 5.94678 1.45469 5.94678C1.32351 5.94678 1.20925 5.99544 1.11192 6.09277L0.800883 6.40381C0.707784 6.49268 0.661235 6.60482 0.661235 6.74023C0.661235 6.87565 0.707784 6.98991 0.800883 7.08301L3.79698 10.0791C3.94509 10.2145 4.11224 10.2822 4.29844 10.2822C4.40424 10.2822 4.5058 10.259 4.60313 10.2124C4.70046 10.1659 4.78086 10.1003 4.84434 10.0156L11.4903 1.59863C11.5623 1.5013 11.5982 1.40186 11.5982 1.30029C11.5982 1.14372 11.5348 1.01888 11.4078 0.925781L11.0714 0.652832ZM8.6212 8.32715C8.43077 8.20866 8.2488 8.09017 8.0753 7.97168C7.99489 7.89128 7.8891 7.85107 7.75791 7.85107C7.6098 7.85107 7.4892 7.90397 7.3961 8.00977L7.10411 8.33984C7.01947 8.43717 6.97715 8.54508 6.97715 8.66357C6.97715 8.79476 7.0237 8.90902 7.1168 9.00635L8.1959 10.0791C8.33132 10.2145 8.49636 10.2822 8.69102 10.2822C8.79681 10.2822 8.89838 10.259 8.99571 10.2124C9.09304 10.1659 9.17556 10.1003 9.24327 10.0156L15.8639 1.62402C15.9358 1.53939 15.9718 1.43994 15.9718 1.32568C15.9718 1.1818 15.9125 1.05697 15.794 0.951172L15.4386 0.678223C15.3582 0.610514 15.2587 0.57666 15.1402 0.57666C14.9964 0.57666 14.8715 0.635905 14.7657 0.754395L8.6212 8.32715Z"></path>
+         </svg>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="whatsapp-chat">
+      <div class="chat-header">
+       <img src="https://fakedetail.com/assets/images/profile.jpg" alt="Michael Avatar" class="avatar">
+       <div class="chat-info">
+        <h3>Rina</h3>
+        <p>Online</p>
+       </div>
+      </div>
+      <div class="chat-body">
+       <div class="message">
+        <p>Dengan Jasa Kelola Website dari Jualan Pro, update konten dan index jadi lebih mudah! 💪 Jumlah pengunjung naik 70% dalam 3 bulan. Saiseenews.com is the best! 🏆</p>
+       </div>
+       <div class="respond">
+        <p>Senang mendengar bahwa layanan kami bermanfaat bagi Anda. Terima kasih <svg viewBox="0 0 16 11" height="11" width="16" fill="#53bdeb" preserveAspectRatio="xMidYMid meet">
+          <path d="M11.0714 0.652832C10.991 0.585124 10.8894 0.55127 10.7667 0.55127C10.6186 0.55127 10.4916 0.610514 10.3858 0.729004L4.19688 8.36523L1.79112 6.09277C1.7488 6.04622 1.69802 6.01025 1.63877 5.98486C1.57953 5.95947 1.51817 5.94678 1.45469 5.94678C1.32351 5.94678 1.20925 5.99544 1.11192 6.09277L0.800883 6.40381C0.707784 6.49268 0.661235 6.60482 0.661235 6.74023C0.661235 6.87565 0.707784 6.98991 0.800883 7.08301L3.79698 10.0791C3.94509 10.2145 4.11224 10.2822 4.29844 10.2822C4.40424 10.2822 4.5058 10.259 4.60313 10.2124C4.70046 10.1659 4.78086 10.1003 4.84434 10.0156L11.4903 1.59863C11.5623 1.5013 11.5982 1.40186 11.5982 1.30029C11.5982 1.14372 11.5348 1.01888 11.4078 0.925781L11.0714 0.652832ZM8.6212 8.32715C8.43077 8.20866 8.2488 8.09017 8.0753 7.97168C7.99489 7.89128 7.8891 7.85107 7.75791 7.85107C7.6098 7.85107 7.4892 7.90397 7.3961 8.00977L7.10411 8.33984C7.01947 8.43717 6.97715 8.54508 6.97715 8.66357C6.97715 8.79476 7.0237 8.90902 7.1168 9.00635L8.1959 10.0791C8.33132 10.2145 8.49636 10.2822 8.69102 10.2822C8.79681 10.2822 8.89838 10.259 8.99571 10.2124C9.09304 10.1659 9.17556 10.1003 9.24327 10.0156L15.8639 1.62402C15.9358 1.53939 15.9718 1.43994 15.9718 1.32568C15.9718 1.1818 15.9125 1.05697 15.794 0.951172L15.4386 0.678223C15.3582 0.610514 15.2587 0.57666 15.1402 0.57666C14.9964 0.57666 14.8715 0.635905 14.7657 0.754395L8.6212 8.32715Z"></path>
+         </svg>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="whatsapp-chat">
+      <div class="chat-header">
+       <img src="https://fakedetail.com/assets/images/profile.jpg" alt="Sophia Avatar" class="avatar">
+       <div class="chat-info">
+        <h3>Ayu</h3>
+        <p>Online</p>
+       </div>
+      </div>
+      <div class="chat-body">
+       <div class="message">
+        <p>Konten blog saya selalu terupdate dan indeks SEO meningkat berkat Saiseenews.com. Terima kasih! 🙌</p>
+       </div>
+       <div class="respond">
+        <p>SEO memang andalan kami. Terima kasih atas feedback positifnya <svg viewBox="0 0 16 11" height="11" width="16" fill="#53bdeb" preserveAspectRatio="xMidYMid meet">
+          <path d="M11.0714 0.652832C10.991 0.585124 10.8894 0.55127 10.7667 0.55127C10.6186 0.55127 10.4916 0.610514 10.3858 0.729004L4.19688 8.36523L1.79112 6.09277C1.7488 6.04622 1.69802 6.01025 1.63877 5.98486C1.57953 5.95947 1.51817 5.94678 1.45469 5.94678C1.32351 5.94678 1.20925 5.99544 1.11192 6.09277L0.800883 6.40381C0.707784 6.49268 0.661235 6.60482 0.661235 6.74023C0.661235 6.87565 0.707784 6.98991 0.800883 7.08301L3.79698 10.0791C3.94509 10.2145 4.11224 10.2822 4.29844 10.2822C4.40424 10.2822 4.5058 10.259 4.60313 10.2124C4.70046 10.1659 4.78086 10.1003 4.84434 10.0156L11.4903 1.59863C11.5623 1.5013 11.5982 1.40186 11.5982 1.30029C11.5982 1.14372 11.5348 1.01888 11.4078 0.925781L11.0714 0.652832ZM8.6212 8.32715C8.43077 8.20866 8.2488 8.09017 8.0753 7.97168C7.99489 7.89128 7.8891 7.85107 7.75791 7.85107C7.6098 7.85107 7.4892 7.90397 7.3961 8.00977L7.10411 8.33984C7.01947 8.43717 6.97715 8.54508 6.97715 8.66357C6.97715 8.79476 7.0237 8.90902 7.1168 9.00635L8.1959 10.0791C8.33132 10.2145 8.49636 10.2822 8.69102 10.2822C8.79681 10.2822 8.89838 10.259 8.99571 10.2124C9.09304 10.1659 9.17556 10.1003 9.24327 10.0156L15.8639 1.62402C15.9358 1.53939 15.9718 1.43994 15.9718 1.32568C15.9718 1.1818 15.9125 1.05697 15.794 0.951172L15.4386 0.678223C15.3582 0.610514 15.2587 0.57666 15.1402 0.57666C14.9964 0.57666 14.8715 0.635905 14.7657 0.754395L8.6212 8.32715Z"></path>
+         </svg>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="whatsapp-chat">
+      <div class="chat-header">
+       <img src="https://fakedetail.com/assets/images/profile.jpg" alt="David Avatar" class="avatar">
+       <div class="chat-info">
+        <h3>Dadang</h3>
+        <p>Online</p>
+       </div>
+      </div>
+      <div class="chat-body">
+       <div class="message">
+        <p>Penjualan online kami naik 200% dalam setahun! 🚲 Dengan Jasa Kelola Website dari Jualan Pro, website kami selalu up-to-date dan mudah diakses. Mantap! 👍</p>
+       </div>
+       <div class="respond">
+        <p>Kami bangga bisa membantu bisnis Anda berkembang. Terima kasih <svg viewBox="0 0 16 11" height="11" width="16" fill="#53bdeb" preserveAspectRatio="xMidYMid meet">
+          <path d="M11.0714 0.652832C10.991 0.585124 10.8894 0.55127 10.7667 0.55127C10.6186 0.55127 10.4916 0.610514 10.3858 0.729004L4.19688 8.36523L1.79112 6.09277C1.7488 6.04622 1.69802 6.01025 1.63877 5.98486C1.57953 5.95947 1.51817 5.94678 1.45469 5.94678C1.32351 5.94678 1.20925 5.99544 1.11192 6.09277L0.800883 6.40381C0.707784 6.49268 0.661235 6.60482 0.661235 6.74023C0.661235 6.87565 0.707784 6.98991 0.800883 7.08301L3.79698 10.0791C3.94509 10.2145 4.11224 10.2822 4.29844 10.2822C4.40424 10.2822 4.5058 10.259 4.60313 10.2124C4.70046 10.1659 4.78086 10.1003 4.84434 10.0156L11.4903 1.59863C11.5623 1.5013 11.5982 1.40186 11.5982 1.30029C11.5982 1.14372 11.5348 1.01888 11.4078 0.925781L11.0714 0.652832ZM8.6212 8.32715C8.43077 8.20866 8.2488 8.09017 8.0753 7.97168C7.99489 7.89128 7.8891 7.85107 7.75791 7.85107C7.6098 7.85107 7.4892 7.90397 7.3961 8.00977L7.10411 8.33984C7.01947 8.43717 6.97715 8.54508 6.97715 8.66357C6.97715 8.79476 7.0237 8.90902 7.1168 9.00635L8.1959 10.0791C8.33132 10.2145 8.49636 10.2822 8.69102 10.2822C8.79681 10.2822 8.89838 10.259 8.99571 10.2124C9.09304 10.1659 9.17556 10.1003 9.24327 10.0156L15.8639 1.62402C15.9358 1.53939 15.9718 1.43994 15.9718 1.32568C15.9718 1.1818 15.9125 1.05697 15.794 0.951172L15.4386 0.678223C15.3582 0.610514 15.2587 0.57666 15.1402 0.57666C14.9964 0.57666 14.8715 0.635905 14.7657 0.754395L8.6212 8.32715Z"></path>
+         </svg>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer>
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-section about">
+      <h3>Tentang Kami</h3>
+      <p>Saiseenews.com menyediakan jasa kelola website profesional untuk meningkatkan bisnis Anda secara online. Kami berdedikasi untuk memberikan layanan terbaik dengan harga yang kompetitif.</p>
+     </div>
+     <div class="footer-section links">
+      <h3>Layanan Lainnya</h3>
+      <ul>
+       <li>
+        <a href="/jasa-web/">Jasa Buat Web</a>
+       </li>
+       <li>
+        <a href="/jasa-kelola-iklan/">Jasa Pasang Iklan</a>
+       </li>
+       <li>
+        <a href="/jasa-up-rangking-web/">Jasa Up Rangking Web</a>
+       </li>
+       <li>
+        <a href="/jasa-kelola-web/">Jasa Kelola Web</a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-section contact">
+      <h3>Kontak Kami</h3>
+      <ul>
+       <li>
+        <i class="fas fa-map-marker-alt"></i> Jalan Lkr. Dramaga No. 09, Bogor
+       </li>
+       <li>
+        <i class="fas fa-phone-alt"></i> +62 813-8050-0660
+       </li>
+       <li>
+        <i class="fas fa-envelope"></i> info@jualanpro.com
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>&copy; 2024 saiseenews.com. Semua Hak Dilindungi.</p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>

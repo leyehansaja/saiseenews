@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saiseenews.com - Jasa pembuatan dan kelola website, jasa pasang iklan untuk jualan produk dan jasa.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Saiseenews.com - Jasa Pembuatan Website Jualan Profesional</title>
+  <style>
+   :root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --white: #ffffff;
+    --whatsapp: #e5ddd5;
+    --chatheader: #075e54;
+    --green: #e6ffda;
+    --text-blur: #a7a1a1;
+   }
+
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+   }
+
+   .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+   }
+
+   header {
+    padding: 2rem 0;
+   }
+
+   header {
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+   }
+
+   header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+   }
+
+   h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 15px;
+   }
+
+   h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+   }
+
+   h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+   }
+
+   h3 {
+    display: block;
+    font-size: 1.80em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center;
+   }
+
+   h4 {
+    display: block;
+    font-size: 1.20em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center;
+   }
+
+   .tab-menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+   }
+
+   .logo {
+    margin-right: 1rem;
+   }
+
+   .tab-menu {
+    display: flex;
+    justify-content: center;
+    background: var(--primary-color);
+    padding: 0.5rem;
+   }
+
+   .tab-menu a {
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+   }
+
+   .tab-menu a:hover {
+    background: var(--accent-color);
+   }
+
+   .mobile-menu {
+    display: none;
+    background: var(--primary-color);
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+   }
+
+   .mobile-menu i {
+    font-size: 1.5rem;
+    color: var(--white);
+   }
+
+   #menuToggle {
+    display: none;
+   }
+
+   #menuToggle:checked+.tab-menu-container .tab-menu {
+    display: flex;
+    flex-direction: column;
+   }
+
+   #menuToggle:checked+.tab-menu-container .mobile-menu .fa-bars {
+    display: none;
+   }
+
+   #menuToggle:checked+.tab-menu-container .mobile-menu .fa-xmark {
+    display: inline-block;
+   }
+
+   .fa-xmark {
+    display: none;
+   }
+
+   @media (max-width: 768px) {
+    .tab-menu {
+     display: none;
+    }
+
+    .mobile-menu {
+     display: block;
+    }
+
+    .tab-menu a {
+     padding: 1rem;
+     width: 100%;
+     text-align: center;
+    }
+
+    .tab-menu-container {
+     justify-content: space-between;
+     padding-left: 1rem;
+     padding-right: 1rem;
+     padding-top: 1rem;
+     padding-bottom: 0.5rem;
+    }
+
+    .logo {
+     flex-grow: 1;
+     display: flex;
+     align-items: center;
+    }
+
+    .logo img {
+     height: 40px;
+    }
+   }
+
+   .highlight {
+    color: var(--primary-color);
+   }
+
+   .cta-button {
+    display: block;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+   }
+
+   .cta-button:hover {
+    background: #c0392b;
+   }
+
+   .portofolio {
+    padding: 2rem 0;
+    background: #f9f9f9;
+   }
+
+   .portofolio h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+   }
+
+   .portofolio h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+   }
+
+   .section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+   }
+
+   .portofolio-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   }
+
+   .portofolio-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+   }
+
+   .portofolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   }
+
+   .portofolio-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+   }
+
+   .portofolio-info {
+    padding: 1rem;
+   }
+
+   .portofolio-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+   }
+
+   .portofolio-info p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+   }
+
+   .view-details {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+   }
+
+   .view-details:hover {
+    background: var(--accent-color);
+   }
+
+   footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 2rem 0;
+   }
+
+   .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+   }
+
+   .footer-section {
+    flex: 1 1 200px;
+    margin: 1rem;
+   }
+
+   .footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+   }
+
+   .footer-section p,
+   .footer-section ul {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+   }
+
+   .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+   }
+
+   .footer-section ul li {
+    margin: 0.5rem 0;
+   }
+
+   .footer-section ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+   }
+
+   .footer-section ul li a:hover {
+    color: var(--primary-color);
+   }
+
+   .footer-section ul li i {
+    margin-right: 0.5rem;
+   }
+
+   .footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+   }
+
+   @media (max-width: 768px) {
+    .footer-content {
+     flex-direction: column;
+    }
+
+    .footer-section {
+     margin: 0.5rem 0;
+    }
+   }
+  </style>
+ </head>
+ <body>
+  <input type="checkbox" id="menuToggle">
+  <div class="tab-menu-container">
+   <div class="logo">
+    <img src="/images/logo/saiseenews-192x192.png" alt="Logo" height="40">
+   </div>
+   <div class="mobile-menu">
+    <label for="menuToggle">
+     <i class="fas fa-bars"></i>
+     <i class="fas fa-xmark"></i>
+    </label>
+   </div>
+   <div class="tab-menu">
+    <a href="/">Beranda</a>
+    <a href="/archive/">Layanan</a>
+    <a href="/portofolio/">Portofolio</a>
+    <a href="/profile/">Tentang Kami</a>
+    <a href="#">Blog</a>
+   </div>
+  </div>
+  <header>
+   <div class="container">
+    <h1>Portofolio <span class="highlight">| Saiseenews.com</span>
+    </h1>
+   </div>
+  </header>
+  <section class="portofolio">
+   <div class="container">
+    <h2>Proyek Terbaru</h2>
+    <p class="section-description">Jelajahi beberapa proyek terbaru kami di berbagai kategori dan temukan bagaimana kami dapat membantu Anda mencapai tujuan bisnis Anda.</p>
+    <div class="portofolio-grid">
+     <div class="portofolio-card">
+      <img src="/images/proyek-website-jualan.jpg" alt="Proyek Website Jualan" class="portofolio-img">
+      <div class="portofolio-info">
+       <h3>Proyek Website Jualan</h3>
+       <p>Proyek ini melibatkan pembuatan website jualan untuk klien di sektor e-commerce. Kami menggunakan teknologi terbaru seperti HTML5, CSS3, dan JavaScript untuk memastikan tampilan yang responsif dan fitur yang intuitif bagi pengguna.</p>
+       <a href="#" class="view-details">Lihat Detail</a>
+      </div>
+     </div>
+     <div class="portofolio-card">
+      <img src="/images/proyek-jasa-iklan.jpg" alt="Proyek Jasa Iklan" class="portofolio-img">
+      <div class="portofolio-info">
+       <h3>Proyek Jasa Iklan</h3>
+       <p>Dalam proyek ini, kami mengelola kampanye iklan digital untuk klien kami. Kami menerapkan strategi iklan yang terukur dan menggunakan platform seperti Google Ads dan Facebook Ads untuk mencapai target audiens yang tepat dan meningkatkan konversi.</p>
+       <a href="#" class="view-details">Lihat Detail</a>
+      </div>
+     </div>
+     <div class="portofolio-card">
+      <img src="/images/proyek-kelola-artikel-web.jpg" alt="Proyek Kelola Artikel Web" class="portofolio-img">
+      <div class="portofolio-info">
+       <h3>Proyek Kelola Artikel Web</h3>
+       <p>Proyek ini melibatkan pengelolaan konten artikel untuk website klien. Kami menghadapi tantangan dalam menjaga konsistensi dan kualitas konten, serta mengoptimalkan artikel untuk SEO. Solusi kami termasuk kalender editorial dan tinjauan berkala untuk memastikan kualitas tertinggi.</p>
+       <a href="#" class="view-details">Lihat Detail</a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer>
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-section about">
+      <h3>Tentang Kami</h3>
+      <p>Saiseenews.com menyediakan jasa pembuatan website untuk jualan, jasa pasang iklan google ads, facebook ads, jasa kelola artikel web, jasa up rangking web untuk membantu bisnis Anda berkembang dengan baik sesuai harapan.</p>
+     </div>
+     <div class="footer-section links">
+      <h3>Layanan Lainnya</h3>
+      <ul>
+       <li>
+        <a href="/jasa-web/">Jasa Buat Web</a>
+       </li>
+       <li>
+        <a href="/jasa-kelola-iklan/">Jasa Pasang Iklan</a>
+       </li>
+       <li>
+        <a href="/jasa-up-rangking-web/">Jasa Up Rangking Web</a>
+       </li>
+       <li>
+        <a href="/jasa-kelola-web/">Jasa Kelola Web</a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-section contact">
+      <h3>Kontak Kami</h3>
+      <ul>
+       <li>
+        <i class="fas fa-map-marker-alt"></i> Jalan Lkr. Dramaga No. 09, Bogor
+       </li>
+       <li>
+        <i class="fas fa-phone-alt"></i> +62 813-8050-0660
+       </li>
+       <li>
+        <i class="fas fa-envelope"></i> info@jualanpro.com
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>&copy; 2024 saiseenews.com. Semua Hak Dilindungi.</p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
